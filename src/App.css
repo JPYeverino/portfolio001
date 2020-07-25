@@ -1,8 +1,27 @@
-.first-container {
-  border: 1px solid gray;
-  margin: 0 auto;
-  margin-top: 30px;
-  padding: 20px;
-  width: 500px;
+.main-container {
+  display: grid;
+}
 
+.tasks-container, .reflections-container {
+  border: 1px solid gray;
+  padding: 20px;
+  margin: 30px;
+  box-sizing: content-box;
+}
+
+.header {
+  border: 1px solid lightcoral;
+  padding: 20px;
+  margin: 30px;
+}
+
+.task-item {
+  border: 1px solid palevioletred;
+}
+
+.sections-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid sandybrown;
+  margin: 30px;
 }
