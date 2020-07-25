@@ -56,7 +56,10 @@ const TASKS_DB: Task[] = [
     status: TaskStatus.DONE,
     meta: {
       createdAt: 'July, 23rd - 20:05',
-      modifiedAt: 'July, 23rd - 21:15'
+      modifiedAt: 'July, 23rd - 21:15',
+      resources: [
+        'https://www.youtube.com/watch?v=Mgs7jl430vs'
+      ]
     }
   },
   {
@@ -103,8 +106,8 @@ function Task(props: Task) {
   return (
     <li className="task-item">{props.description}
       <ul>
-        <li className="task-meta">{props.meta.createdAt}</li>
-        <li className="task-meta">{props.meta.modifiedAt}</li>
+        <li className="task-meta">Created at: {props.meta.createdAt}</li>
+        <li className="task-meta">Last modified: {props.meta.modifiedAt}</li>
         {props.meta.resources?.map((resource, index) => {
           return (
             <li className="resource" key={index}><a href={`"${resource}"`} className="resourceLink">{resource}</a></li>
